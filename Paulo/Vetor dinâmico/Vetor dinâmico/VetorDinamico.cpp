@@ -35,12 +35,6 @@ int VetorDinamico::obtem_valor(int posicao){
 }
 
 int VetorDinamico::remove_valor(int posicao){
-	//vetor[contador] = NULL;
-	//contador--;
-	//if (contador < (tamanho - 5)){
-	//	tamanho -= 5;
-	//	vetor = (int*)realloc(vetor, tamanho * sizeof(int));
-	//}
 	for (int i = posicao; i < tamanho; i++) {
 		vetor[i] = vetor[i + 1];
 	}

@@ -10,7 +10,7 @@ int main() {
 	//Realoca o vetor de 5 em 5 elementos (remocao e adicao)
 	//Testa a classe no Main
 
-	int aux;
+	int aux, num;
 	srand(time(0));
 
 	VetorDinamico * vetor = new VetorDinamico();
@@ -21,6 +21,15 @@ int main() {
 	}
 
 	for (int i = 0; i < 8; i++) {
+		cout << vetor->obtem_valor(i) << endl;
+	}
+
+	cout << "Digite um numero para remover: ";
+	cin >> num;
+
+	vetor->remove_valor(num);
+
+	for (int i = 0; i < 7; i++) {
 		cout << vetor->obtem_valor(i) << endl;
 	}
 
