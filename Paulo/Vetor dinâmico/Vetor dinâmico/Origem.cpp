@@ -20,11 +20,9 @@ int main() {
 		vetor->adiciona_valor(aux);
 	}
 
-
 	for (int i = 0; i < 8; i++) {
 		cout << vetor->obtem_valor(i) << endl;
 	}
-
 
 	system("pause");
 	return 0;
