@@ -2,9 +2,12 @@
 #include "VetorDinamico.h"
 
 using namespace std;
-main() {
-	VetorDinamico *vetor = new VetorDinamico ();
-
+int main()
+{
+	VetorDinamico *vetor = new
+		VetorDinamico();
+	vetor->adicionar_valor(2);
+	cout << vetor->obtem_valor(0);
 
 
 
