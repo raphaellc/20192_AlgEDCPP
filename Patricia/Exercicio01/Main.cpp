@@ -3,6 +3,8 @@
 
 using namespace std;
 main() {
+	VetorDinamico vetor = new VetorDinamico;
+
 
 
 
