@@ -1,0 +1,1 @@
+Versão do meu Visual Studio em casa: 10.0.17763.0
