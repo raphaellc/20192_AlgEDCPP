@@ -43,6 +43,10 @@ int VetorDinamico::obtem_valor(int posicao)
 
 int VetorDinamico::remover_valor(int posicao)
 {
-	free(
+	for (i = posicao; i < tamanho; i++)
+	{
+		vetor[i] = vetor[i + 1];
+	}
+	contador--;
 	return 0;
 }
