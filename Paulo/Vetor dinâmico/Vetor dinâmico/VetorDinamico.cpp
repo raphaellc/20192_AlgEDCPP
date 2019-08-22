@@ -4,7 +4,7 @@ using namespace std;
 
 VetorDinamico::VetorDinamico(){
 	int tamanho = 5;
-	int posicao = 0;
+	int contador = 0;
 	vetor = (int *)malloc(tamanho * sizeof(int));
 }
 
@@ -13,10 +13,10 @@ VetorDinamico::~VetorDinamico(){
 }
 
 void VetorDinamico::adiciona_valor(int valor){
-	vetor[posicao] = valor;
-	posicao++;
+	vetor[contador] = valor;
+	contador++;
 
-	if (posicao >= tamanho) {
+	if (contador >= tamanho) {
 		tamanho += 5;
 		vetor = (int*)realloc(vetor, tamanho * sizeof(int));
 	}
@@ -35,14 +35,16 @@ int VetorDinamico::obtem_valor(int posicao){
 }
 
 int VetorDinamico::remove_valor(int posicao){
-	vetor[posicao] = NULL;
-	posicao--;
-
-	if (posicao < (tamanho - 5)){
-		tamanho -= 5;
-		vetor = (int*)realloc(vetor, tamanho * sizeof(int));
+	//vetor[contador] = NULL;
+	//contador--;
+	//if (contador < (tamanho - 5)){
+	//	tamanho -= 5;
+	//	vetor = (int*)realloc(vetor, tamanho * sizeof(int));
+	//}
+	for (int i = posicao; i < tamanho; i++) {
+		vetor[i] = vetor[i + 1];
 	}
-
+	contador--;
 
 	return 0;
 }

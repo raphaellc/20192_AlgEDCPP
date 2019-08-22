@@ -10,6 +10,6 @@ public:
 	int remove_valor(int posicao);
 
 	int * vetor;
-	int tamanho, posicao;
+	int tamanho, contador;
 };
 
