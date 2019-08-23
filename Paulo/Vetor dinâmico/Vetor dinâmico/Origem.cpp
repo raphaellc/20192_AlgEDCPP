@@ -10,18 +10,31 @@ int main() {
 	//Realoca o vetor de 5 em 5 elementos (remocao e adicao)
 	//Testa a classe no Main
 
-	int aux;
+	int aux, num = 0;
 	srand(time(0));
 
 	VetorDinamico * vetor = new VetorDinamico();
-
-	for (int i = 0; i < 8; i++) {
+	
+	for (int i = 0; i < 18; i++) {
 		aux = rand() % 10;
 		vetor->adiciona_valor(aux);
+		cout << "[" << i << "]" << vetor->obtem_valor(i) << "\t" << "Tamanho vetor: " << vetor->tamanho << endl;
 	}
 
-	for (int i = 0; i < 8; i++) {
-		cout << vetor->obtem_valor(i) << endl;
+	cout << "Digite -1 para parar de remover valores\n";
+
+	while (num != -1 && num <= vetor->contador && vetor->contador) {
+		cout << endl << "Digite uma posicao para remover: ";
+		cin >> num;
+		if (num < 0 || num > vetor->contador) {
+			cout << "Numero invalido\n";
+		}
+		else {
+			vetor->remove_valor(num);
+			for (int i = 0; i < vetor->contador; i++) {
+				cout << "[" << i << "]" << vetor->obtem_valor(i) << "\t" << "Tamanho vetor: " << vetor->tamanho << endl;
+			}
+		}
 	}
 
 	system("pause");

@@ -10,6 +10,7 @@ VetorDinamico::VetorDinamico(){
 
 
 VetorDinamico::~VetorDinamico(){
+	delete this->vetor;
 }
 
 void VetorDinamico::adiciona_valor(int valor){
@@ -35,16 +36,18 @@ int VetorDinamico::obtem_valor(int posicao){
 }
 
 int VetorDinamico::remove_valor(int posicao){
-	//vetor[contador] = NULL;
-	//contador--;
-	//if (contador < (tamanho - 5)){
-	//	tamanho -= 5;
-	//	vetor = (int*)realloc(vetor, tamanho * sizeof(int));
-	//}
-	for (int i = posicao; i < tamanho; i++) {
-		vetor[i] = vetor[i + 1];
+	if (contador == 0) {
+		cout << "vetor vazio" << endl;
 	}
-	contador--;
-
+	else {
+		for (int i = posicao; i < tamanho; i++) {
+			vetor[i] = vetor[i + 1];
+		}
+		contador--;
+		if (contador == tamanho - 5) {
+			tamanho -= 5;
+			vetor = (int*)realloc(vetor, tamanho * sizeof(int));
+		}
+	}
 	return 0;
 }
