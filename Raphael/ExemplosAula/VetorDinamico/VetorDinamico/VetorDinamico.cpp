@@ -50,7 +50,7 @@ int VetorDinamico::removeValor(int posicao)
 		valor_retorno = this->vetor_dinamico[posicao];
 		this->vetor_dinamico[posicao] = -1;
 		cont--;
-		if (cont == (tam - 5)) {//verificar para realocar
+		if (cont == (tam - 5) && tam > 5) {//verificar para realocar
 			for (int i = 0; i < tam; i++) {
 				if (this->vetor_dinamico[i] <= -1) {
 					j = i + 1;
@@ -61,8 +61,8 @@ int VetorDinamico::removeValor(int posicao)
 						this->vetor_dinamico[i] = this->vetor_dinamico[j];
 				}
 			}
+			realocar(tam - 5);
 		}
-		realocar(tam - 5);
 	}
 
 	return 0;
