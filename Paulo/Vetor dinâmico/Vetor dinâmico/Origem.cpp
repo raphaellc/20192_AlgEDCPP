@@ -23,12 +23,17 @@ int main() {
 
 	cout << "Digite -1 para parar de remover valores\n";
 
-	while (num != -1 && vetor->contador) {
+	while (num != -1 && num <= vetor->contador && vetor->contador) {
 		cout << endl << "Digite uma posicao para remover: ";
 		cin >> num;
-		vetor->remove_valor(num);
-		for (int i = 0; i < vetor->contador; i++) {
-			cout << "[" << i << "]" << vetor->obtem_valor(i) << "\t" << "Tamanho vetor: " << vetor->tamanho << endl;
+		if (num < 0 || num > vetor->contador) {
+			cout << "Numero invalido\n";
+		}
+		else {
+			vetor->remove_valor(num);
+			for (int i = 0; i < vetor->contador; i++) {
+				cout << "[" << i << "]" << vetor->obtem_valor(i) << "\t" << "Tamanho vetor: " << vetor->tamanho << endl;
+			}
 		}
 	}
 
