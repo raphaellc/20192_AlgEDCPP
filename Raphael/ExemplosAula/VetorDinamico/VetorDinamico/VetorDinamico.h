@@ -10,6 +10,6 @@ public:
 private:
 	void realocar(int novo_tam);
 	int * vetor_dinamico;
-	int tam, cont;
+	int tam = 0, cont;
 };
 
