@@ -42,11 +42,14 @@ void VetorDinamico::adicionaValor(int valor)
 
 int VetorDinamico::removeValor(int posicao)
 {
-	int valor_retorno, j;
+	int valor_retorno, j = 0;
 	if (cont == 0) {
 		return -1;
-	}
+	}	
 	else if (posicao < tam && posicao >= 0) {
+		if (this->vetor_dinamico[posicao] < 0){//posição livre!
+			return -1;
+		}
 		valor_retorno = this->vetor_dinamico[posicao];
 		this->vetor_dinamico[posicao] = -1;
 		cont--;
@@ -57,8 +60,10 @@ int VetorDinamico::removeValor(int posicao)
 					while ((this->vetor_dinamico[j] <= -1) && j < tam) {
 						j++;
 					}
-					if (j != tam)
+					if (j != tam) {
 						this->vetor_dinamico[i] = this->vetor_dinamico[j];
+						this->vetor_dinamico[j] = -1;
+					}
 				}
 			}
 			realocar(tam - 5);
@@ -74,7 +79,20 @@ int VetorDinamico::obtemValor(int posicao)
 		return 0;
 	else if (posicao >= 0 && posicao < tam) {
 		return this->vetor_dinamico[posicao];
+	}else
+	{
+		return -1;
 	}
+}
+
+int VetorDinamico::obterTamanho()
+{
+	return this->tam;
+}
+
+int VetorDinamico::obterNumElementos()
+{
+	return this->cont;
 }
 
 void VetorDinamico::realocar(int novo_tam)

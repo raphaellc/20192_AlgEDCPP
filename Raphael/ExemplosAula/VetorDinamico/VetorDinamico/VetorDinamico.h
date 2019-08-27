@@ -7,6 +7,8 @@ public:
 	void adicionaValor(int valor);
 	int removeValor(int posicao);
 	int obtemValor(int posicaco);
+	int obterTamanho();
+	int obterNumElementos();
 private:
 	void realocar(int novo_tam);
 	int * vetor_dinamico;
