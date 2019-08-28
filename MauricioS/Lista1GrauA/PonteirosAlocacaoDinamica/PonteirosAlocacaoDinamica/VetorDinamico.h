@@ -8,6 +8,7 @@ public:
 
 	void SetVetor(int p_position, int p_value);
 	void CreateVetor();
+	void ReallocVetor(int p_qtPosition);
 	void DesalocarVetor();
 	void SetSize(int p_size);
 	int GetSize();

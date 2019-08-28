@@ -20,6 +20,12 @@ void VetorDinamico::CreateVetor()
 	vetor = (int*)calloc(size, sizeof(int));
 }
 
+void VetorDinamico::ReallocVetor(int p_qtPosition)
+{
+	SetSize(size + p_qtPosition);
+	vetor = (int*)realloc(vetor, size * sizeof(int));
+}
+
 void VetorDinamico::DesalocarVetor()
 {
 	delete(vetor);
