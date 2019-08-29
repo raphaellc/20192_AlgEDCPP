@@ -43,6 +43,17 @@ int main()
 	vetorDin->ReallocVetor(sizeTemp);
 	cout << "-----------------------------------------" << endl;
 
+	//SET DE VALORES PARA PRRENCHIMENTO DO ARRAY
+	for (int i = vetorDin->GetSize() - sizeTemp; i < vetorDin->GetSize(); i++)
+	{
+		int _valueTemp;
+		cout << "preencha o valor que ira na posicao " << i + 1 << " de " << vetorDin->GetSize() << " :";
+		cin >> _valueTemp;
+		cout << endl;
+
+		vetorDin->SetVetor(i, _valueTemp);
+	}
+
 	//PRINT DOS VALORES COM AS NOVAS POSICOES DO ARRAY
 	cout << "----------------------------------------" << endl;
 	cout << "Posicoes do vetor com as novas posicoes: ";
