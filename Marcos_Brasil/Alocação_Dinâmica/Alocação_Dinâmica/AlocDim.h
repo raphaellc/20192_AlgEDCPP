@@ -13,18 +13,18 @@ public:
 	void set_valor(int _pos, int _valor);
 	void set_ultimaPosVetor(int _pos);
 
-	//clears e deletes 
-	void clear_valor(int _pos);
-	void delete_vetor();
-
 	//gets
 	int get_posVetor() { return posVetor; }
 	int get_posMaxVetor() { return posMaxVetor; }
 	int get_posValor() { return valor; }
 	bool get_ultimaPosVetor() { return ultimaPosVetor; }
 
+	//clears e deletes 
+	void clear_valor(int _pos);
+	void realocar_vetor(int _tamanho);
+
+	//others
 	void desenhar();
-	void inicilizar();
 
 
 protected:
