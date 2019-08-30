@@ -15,16 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AlocDim.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Origem.cpp">
       <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="AlocDim.cpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
