@@ -1,7 +1,7 @@
 #pragma once
 #include "ClasseDerivada.h"
 class ClasseDerivada2 :
-	public ClasseDerivada
+	protected ClasseDerivada
 {
 public:
 	ClasseDerivada2();
