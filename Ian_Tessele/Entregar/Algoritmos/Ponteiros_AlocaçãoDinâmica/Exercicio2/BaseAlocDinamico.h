@@ -12,5 +12,8 @@ public:
 
 	void BaseC(int *Vetor, int VetorSize);
 	void Delete_C(int *Vetor);
+
+	void ADD_Values(int *Vetor, int VetorSize);
+
 };
 

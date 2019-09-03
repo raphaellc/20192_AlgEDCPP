@@ -15,5 +15,10 @@ public:
 
 	void ADD_Values(int *Vetor, int VetorSize);
 
+	void Realloc(int *Vetor, int VetorSize, int NewVetorSize);
+	void New(int *Vetor, int VetorSize, int NewVetorSize);
+
+	void ViewUI_C(int *Vetor, int VetorSize);
+	void ViewUI_C_Plus_Plus(int *Vetor, int VetorSize);
 };
 
