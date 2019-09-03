@@ -9,7 +9,7 @@ public:
 	int obtem_valor(int posicao);
 	int remove_valor(int posicao);
 
-	int * vetor;
-	int tamanho, contador;
+	int * valor;
+
 };
 
