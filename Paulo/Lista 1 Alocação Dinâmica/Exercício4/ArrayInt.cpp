@@ -20,7 +20,7 @@ void ArrayInt::realocar(){
 		array = (int*)realloc(array, tam * sizeof(int));
 	}
 	//caso precise diminuir
-	else if (indice == tam - 5) {
+	else if (qtd_elementos == tam - 5) {
 		tam -= 5;
 		array = (int*)realloc(array, tam * sizeof(int));
 	}
@@ -44,13 +44,10 @@ void ArrayInt::remover(){
 		std::cout << "vetor vazio" << std::endl;
 	}
 	else {
-
 		array[qtd_elementos-1] = NULL;
-
 		qtd_elementos--;
-		if (indice == tam - 5) {
-			tam -= 5;
-			array = (int*)realloc(array, tam * sizeof(int));
+		if (qtd_elementos == tam - 5) {
+			ArrayInt::realocar();
 		}
 	}
 }
@@ -66,12 +63,13 @@ int ArrayInt::obterValorEm(int i){
 }
 
 int ArrayInt::obterValor(){
-	return array[tam];
+	std::cout << array[qtd_elementos-1] << std::endl;
+	return 0;
 }
 
 int ArrayInt::mostrarValores(){
-	for (int i = 0; i < tam; i++) {
-		std::cout << "valor " << i + 1 << " do vetor: " << array[i] << std::endl;
+	for (int i = 0; i < qtd_elementos; i++) {
+		std::cout << "[" << i << "]" << obterValorEm(i) << "\t" << "Tamanho vetor: " << tam << std::endl;
 	}
 	return 0;
 }
