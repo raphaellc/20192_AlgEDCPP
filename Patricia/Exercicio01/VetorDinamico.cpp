@@ -1,7 +1,7 @@
 #include "VetorDinamico.h"
 #include <iostream>
 
-
+using namespace std;
 
 VetorDinamico::VetorDinamico()
 {
@@ -13,6 +13,20 @@ VetorDinamico::VetorDinamico()
 
 VetorDinamico::~VetorDinamico()
 {
+}
+
+int VetorDinamico::exibe()
+{
+	for (int i = 0; i < tamanho; i++)
+	{
+		int valor = vetor[i];
+		if (i >= contador)
+		{
+			valor =- 1;
+		}
+		cout << "[" << valor << "]";
+	}
+	return 0;
 }
 
 void VetorDinamico::adicionar_valor(int valor)
@@ -43,6 +57,10 @@ int VetorDinamico::obtem_valor(int posicao)
 
 int VetorDinamico::remover_valor(int posicao)
 {
-	free(
+	for (int i = posicao; i < tamanho; i++)
+	{
+		vetor[i] = vetor[i + 1];
+	}
+	contador--;
 	return 0;
 }
