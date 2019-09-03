@@ -33,7 +33,7 @@ int ArrayInt::tamanho(){
 void ArrayInt::adiciona(int val){
 	array[indice] = val;
 	indice++;
-
+	qtd_elementos++;
 	if (indice >= tam) {
 		ArrayInt::realocar();
 	}
@@ -45,7 +45,7 @@ void ArrayInt::remover(){
 	}
 	else {
 
-		array[qtd_elementos] = 0;
+		array[qtd_elementos-1] = NULL;
 
 		qtd_elementos--;
 		if (indice == tam - 5) {

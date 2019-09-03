@@ -16,21 +16,6 @@ int main() {
 		cout << "[" << i << "]" << array->obterValorEm(i) << "\t" << "Tamanho vetor: " << array->tam << endl;
 	}
 
-	//cout << "Digite -1 para parar de remover valores\n";
-	//
-	//while (num != -1 && num <= array->indice && array->indice) {
-	//	cout << endl << "Digite uma posicao para remover: ";
-	//	cin >> num;
-	//	if (num < 0 || num > array->indice) {
-	//		cout << "Numero invalido\n";
-	//	}
-	//	else {
-	//		array->remover();
-	//		for (int i = 0; i < array->indice; i++) {
-	//			cout << "[" << i << "]" << array->obterValorEm(i) << "\t" << "Tamanho vetor: " << array->tam << endl;
-	//		}
-	//	}
-	//}
 
 	cout << "\n------------------------\n";
 	array->remover();
