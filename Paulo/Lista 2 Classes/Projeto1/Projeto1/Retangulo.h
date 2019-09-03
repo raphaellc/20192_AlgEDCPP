@@ -6,10 +6,12 @@ public:
 	~Retangulo();
 
 	int getAltura();
-	void setAltura(int altura);
+	void setAltura(float valor);
 	int getComprimento();
-	void setComprimento(int comprimento);
+	void setComprimento(float valor);
+	void calcularPerimetro();
+	void calcularArea();
 
-	int comprimento = 1, altura = 1;
+	float comprimento = 1, altura = 1, perimetro, area;
 };
 
