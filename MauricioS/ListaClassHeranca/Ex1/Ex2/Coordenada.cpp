@@ -49,24 +49,20 @@ int Coordenada::GetVetorPosY()
 
 int Coordenada::Comprimento()
 {
-	//TODO criar logica para calculo do comprimento
-	return 0;
+	return vetorPosX[1] - vetorPosX[0];
 }
 
 int Coordenada::Altura()
 {
-	//TODO criar logica para calculo da altura
-	return 0;
+	return vetorPosY[3] - vetorPosY[0];
 }
 
 int Coordenada::Area()
 {
-	//TODO criar logica para calculo da area
-	return 0;
+	return Comprimento() * Altura();
 }
 
 int Coordenada::Perimetro()
 {
-	//TODO criar logica para calculo do perimetro
-	return 0;
+	return 2 * (Comprimento() + Altura());
 }
