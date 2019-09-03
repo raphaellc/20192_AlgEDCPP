@@ -35,13 +35,13 @@ void BaseAlocDinamico::BaseC(int * Vetor, int VetorSize)
 void BaseAlocDinamico::Delete_C_Plus_Plus(int * Vetor)
 {
 	std::cout << std::endl;
-	delete Vetor;
+	delete Vetor; // limpa a memoria
 	std::cout << "Clear" << std::endl << std::endl;
 }
 void BaseAlocDinamico::Delete_C(int * Vetor)
 {
 	std::cout << std::endl;
-	free(Vetor);
+	free(Vetor); // limpa a memoria
 	std::cout << "Clear" << std::endl << std::endl;
 }
 
