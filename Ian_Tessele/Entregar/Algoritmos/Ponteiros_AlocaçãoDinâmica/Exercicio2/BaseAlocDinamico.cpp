@@ -24,7 +24,7 @@ void BaseAlocDinamico::BaseC_Plus_Plus(int *Vetor, int VetorSize)
 	}
 	for (int i = 0; i < VetorSize; i++) {
 
-		std::cout <<"Value "<< i << ": " << Vetor[i] << std::endl;
+		std::cout << "Value " << i << ": " << Vetor[i] << std::endl;
 
 	}
 }

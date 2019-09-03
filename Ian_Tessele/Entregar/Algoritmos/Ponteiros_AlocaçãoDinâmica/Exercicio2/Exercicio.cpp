@@ -15,7 +15,7 @@ Exercicio::~Exercicio()
 void Exercicio::Atualizar()
 {
 
-	BaseC(Vetor,VetorSize);
-	Delete_C(Vetor);
+	BaseC_Plus_Plus(Vetor,VetorSize);
+	Delete_C_Plus_Plus(Vetor);
 
 }
