@@ -1,7 +1,7 @@
 #pragma once
 #include "Coordenadas.h"
 class Retangulo :
-	protected Coordenadas
+	public Coordenadas
 {
 public:
 	Retangulo();
@@ -12,10 +12,16 @@ public:
 	void calcArea_();
 	void calcPerimetro_();
 
+	void setPonto(int p, float _x, float _y);
+
 	float getAltura() { return altura; }
 	float getComprimento() { return comprimento; }
+	
+
 
 protected:
-	float altura, comprimento, area, perimetro, *ponto;
+	float altura, comprimento, area, perimetro;
+
+	Coordenadas ponto[4];
 };
 

@@ -4,12 +4,19 @@
 
 Retangulo::Retangulo()
 {
-	ponto = new float[4];
 }
 
 
 Retangulo::~Retangulo()
 {
 }
+
+void Retangulo::setPonto(int p, float _x, float _y)
+{
+
+	ponto[p].setCoordenadas(_x, _y);
+
+}
+
 
 

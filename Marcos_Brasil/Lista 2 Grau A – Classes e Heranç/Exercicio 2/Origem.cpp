@@ -11,22 +11,26 @@ int main() {
 
 	setlocale(LC_ALL, "ptb");
 
-	// fazer dentro de um do/while
-
-	cout << "Digite o valores entre 0.0 a 20.0 das coordenadas do " << contador << "º ponto do retangulo: " << endl 
-		<< "X: ";
-	cin >> x;
-	cout << "Agora para Y: ";
-	cin >> y;
-
-	if ((x > 0 && x < 20) && (y > 0 && y < 20))
+	do
 	{
-		// validar
-	}
-	else
-	{
-		cout << "Algum dos seus valores estão fora do limite determinado.";
-	}
+		cout << "Digite o valores entre 0.0 a 20.0 das coordenadas do " << contador << "º ponto do retangulo: " << endl
+			<< "X: ";
+		cin >> x;
+		cout << "Agora para Y: ";
+		cin >> y;
+
+		if ((x > 0 && x < 20) && (y > 0 && y < 20))
+		{
+			retangulo.setPonto(contador - 1, x, y);
+			contador++;
+			cout << endl;
+		}
+		else
+		{
+			cout << "Algum dos seus valores estão fora do limite determinado." << endl;
+		}
+	} while (contador < 4);
+
 
 	system("pause");
 	return 0;
