@@ -35,16 +35,18 @@ bool Retangulo::verificaQuadrado(){
 }
 
 void Retangulo::setCoordenadas(int pontoX[], int pontoY[]){
+	bool talkey = true;
+
 	for (int i = 0; i < 4; i++) {
-		if (pontoX[i] < 0 || pontoY[i] > 20 || pontoY[i] < 0 || pontoY[i] > 20) {
+		if ((pontoX[i] < 0 || pontoX[i] > 20) || (pontoY[i] < 0 || pontoY[i] > 20)) {
 			cout << "nao pode ser menor que 0 nem maior que 20 talkey" << endl;
-			break;
+			talkey = false;
 		}
-		else {
-			setPontoA(pontoX[0], pontoY[0]);
-			setPontoB(pontoX[1], pontoY[1]);
-			setPontoC(pontoX[2], pontoY[2]);
-			setPontoD(pontoX[3], pontoY[3]);
-		}
+	}
+	if (talkey = true){
+		setPontoA(pontoX[0], pontoY[0]);
+		setPontoB(pontoX[1], pontoY[1]);
+		setPontoC(pontoX[2], pontoY[2]);
+		setPontoD(pontoX[3], pontoY[3]);
 	}
 }
