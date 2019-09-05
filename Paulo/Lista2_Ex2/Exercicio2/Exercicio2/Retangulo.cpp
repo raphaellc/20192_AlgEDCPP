@@ -2,30 +2,49 @@
 
 
 
-Retangulo::Retangulo()
-{
+Retangulo::Retangulo(){
 }
 
 
-Retangulo::~Retangulo()
-{
+Retangulo::~Retangulo(){
 }
 
-void Retangulo::calcularAltura() {
+float Retangulo::calcularAltura() {
+	return calcAltura();
 }
 
-void Retangulo::calcularComprimento() {
+float Retangulo::calcularComprimento() {
+	return calcComprimento();
 }
 
-void Retangulo::calcularArea() {
+float Retangulo::calcularArea() {
+	return calcArea();
 }
 
-void Retangulo::calcularPerimetro() {
+float Retangulo::calcularPerimetro() {
+	return calcPerimetro();
 }
 
-void Retangulo::setCoordenadas(float *ponto){
+bool Retangulo::verificaQuadrado(){
+	if (altura == comprimento) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
 
-
-
-
+void Retangulo::setCoordenadas(int pontoX[], int pontoY[]){
+	for (int i = 0; i < 4; i++) {
+		if (pontoX[i] < 0 || pontoY[i] > 20 || pontoY[i] < 0 || pontoY[i] > 20) {
+			cout << "nao pode ser menor que 0 nem maior que 20 talkey" << endl;
+			break;
+		}
+		else {
+			setPontoA(pontoX[0], pontoY[0]);
+			setPontoB(pontoX[1], pontoY[1]);
+			setPontoC(pontoX[2], pontoY[2]);
+			setPontoD(pontoX[3], pontoY[3]);
+		}
+	}
 }

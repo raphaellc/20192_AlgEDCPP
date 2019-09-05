@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Coordenada.cpp" />
+    <ClCompile Include="Origem.cpp" />
     <ClCompile Include="Retangulo.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
