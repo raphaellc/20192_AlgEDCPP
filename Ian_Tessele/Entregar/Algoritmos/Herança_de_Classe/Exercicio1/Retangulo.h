@@ -5,7 +5,7 @@ public:
 	Retangulo();
 	~Retangulo();
 
-	double Comprimento;
+	double Comprimento;//base
 	double Altura;
 
 	double CalcPerimetro();
