@@ -17,7 +17,7 @@ public:
 		livro,
 		clava,
 		caveira_magica,
-		bardo,
+		marreta,
 		machado,
 		martelo,
 		adaga

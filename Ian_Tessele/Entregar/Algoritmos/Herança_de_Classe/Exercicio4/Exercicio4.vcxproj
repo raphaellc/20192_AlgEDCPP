@@ -123,13 +123,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="barbaro.h" />
+    <ClInclude Include="bardo.h" />
     <ClInclude Include="Classe_Player_Base.h" />
     <ClInclude Include="Clerigo.h" />
+    <ClInclude Include="ladino.h" />
+    <ClInclude Include="mago.h" />
+    <ClInclude Include="paladino.h" />
+    <ClInclude Include="ranger.h" />
+    <ClInclude Include="sacerdote_das_trevaz.h" />
+    <ClInclude Include="sacerdote_da_luz.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="barbaro.cpp" />
+    <ClCompile Include="bardo.cpp" />
     <ClCompile Include="Classe_Player_Base.cpp" />
     <ClCompile Include="Clerigo.cpp" />
+    <ClCompile Include="ladino.cpp" />
+    <ClCompile Include="mago.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="paladino.cpp" />
+    <ClCompile Include="ranger.cpp" />
+    <ClCompile Include="sacerdote_das_trevaz.cpp" />
+    <ClCompile Include="sacerdote_da_luz.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
