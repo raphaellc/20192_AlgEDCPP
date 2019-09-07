@@ -11,61 +11,67 @@ Base_Guerreiro::~Base_Guerreiro()
 {
 }
 
-void Base_Guerreiro::Atacar(int _dano, TypeArm _arma, bool _walk)
+void Base_Guerreiro::Atacar()
 {
 
-	std::cout << "Preparou /n";
-	std::cout << "se moveu /n";
-	std::cout << "atacou /n";
-	std::cout << "Dano dado foi de: " << _dano << " /n";
+	std::cout << "Preparou \n";
+	std::cout << "se moveu \n";
+	std::cout << "atacou \n";
+	std::cout << "Dano dado foi de: " << dano << " \n";
 
-	Idle(_walk);
+	Idle();
 
 }
 
-void Base_Guerreiro::Defender(int _dano, TypeArm _arma, bool _walk)
+void Base_Guerreiro::Defender()
 {
 }
 
-void Base_Guerreiro::Healing(int value_Up, int _life, bool _walk)
+void Base_Guerreiro::Healing()
 {
 
-	std::cout << "Pegando Pocao /n";
-	std::cout << "pocao em uso /n";
-	std::cout << "pocao usada /n";
-	Idle(_walk);
+	std::cout << "Pegando Pocao \n";
+	std::cout << "pocao em uso \n";
+	std::cout << "pocao usada \n";
+	Idle();
 
 }
 
-void Base_Guerreiro::walk(bool _walk)
+void Base_Guerreiro::walk()
 {
-	_walk = true;
-	std::cout << "Andando /n";
-	while (_walk)
+	StartWalk = true;
+	std::cout << "Andando \n";
+	while (StartWalk)
 	{
 		char Resposta;
-		std::cout << "Parar? Y/N";
+		std::cout << "Parar? Y/N: ";
 		cin >> Resposta;
 
 		switch (Resposta)
 		{
 		case 'Y':
-			Idle(_walk);
+			system("pause");
 			break;
 		case 'N':
-			_walk = true;
+			StartWalk = true;
+			break;
+		case 'y':
+			system("pause");
+			break;
+		case 'n':
+			StartWalk = true;
 			break;
 		default:
-			Idle(_walk);
+			Idle();
 			break;
 		}
 	}
 
 }
 
-void Base_Guerreiro::Idle(bool _walk)
+void Base_Guerreiro::Idle()
 {
-	_walk = false;
-	std::cout << "Parou /n";
-	std::cout << "Na espera /n";
+	StartWalk = false;
+	std::cout << "Parou \n";
+	std::cout << "Na espera \n";
 }

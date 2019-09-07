@@ -21,13 +21,11 @@ public:
 	Base_Guerreiro();
 	~Base_Guerreiro();
 
-protected:
-
 	string nome;
 
 	int life;
 	int stamina;
-	
+
 	bool StartWalk;
 
 	SubClass Classe;
@@ -35,12 +33,13 @@ protected:
 	TypeArm Arma;
 	int dano;
 
-	void virtual SetStatus(string _nome , int _life, int _stamina, SubClass _classe) = 0;
+	virtual void SetStatus() = 0;
 
-	void virtual Atacar(int _dano, TypeArm _arma, bool _walk);
-	void virtual Defender(int _dano, TypeArm _arma, bool _walk);
-	void virtual Healing(int value_Up,int _life, bool _walk);
-	void virtual walk(bool _walk);
-	void virtual Idle(bool _walk);
+	virtual void Atacar();
+	virtual void Defender();
+	virtual void Healing();
+	virtual void walk();
+	virtual void Idle();
+
 };
 
