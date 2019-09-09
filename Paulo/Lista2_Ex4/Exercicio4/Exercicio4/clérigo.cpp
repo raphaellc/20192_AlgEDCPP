@@ -4,6 +4,7 @@
 
 Clérigo::Clérigo()
 {
+	Personagem::Personagem();
 }
 
 

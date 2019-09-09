@@ -13,5 +13,5 @@ Paladino::~Paladino()
 
 void Paladino::golpeFurioso(){
 	ataqueLeve();
-	cout << " dnado golpe furioso " << endl;
+	cout << " dando golpe furioso " << endl;
 }

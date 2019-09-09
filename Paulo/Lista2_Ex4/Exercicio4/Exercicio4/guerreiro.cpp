@@ -13,5 +13,5 @@ Guerreiro::~Guerreiro()
 
 void Guerreiro::ataqueForte(){
 	ataqueLeve();
-	cout << " ataque forte " << endl;
+	cout << " dando ataque forte " << endl;
 }
