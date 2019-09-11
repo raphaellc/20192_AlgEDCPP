@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{4C3E4967-EF2D-479C-93CF-74F240C48D55}</ProjectGuid>
-    <RootNamespace>HerancaMultipla</RootNamespace>
+    <ProjectGuid>{DFE84078-E358-44D8-BB11-4644AC4D8DBC}</ProjectGuid>
+    <RootNamespace>HerancaPolimorfismo</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -111,15 +111,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Carnivora.h" />
-    <ClInclude Include="Herbivora.h" />
-    <ClInclude Include="Onivora.h" />
+    <ClCompile Include="Forma.cpp" />
+    <ClCompile Include="Origem.cpp" />
+    <ClCompile Include="Retangulo.cpp" />
+    <ClCompile Include="Triangulo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Carnivora.cpp" />
-    <ClCompile Include="Herbivora.cpp" />
-    <ClCompile Include="Onivora.cpp" />
-    <ClCompile Include="Origem.cpp" />
+    <ClInclude Include="Forma.h" />
+    <ClInclude Include="Retangulo.h" />
+    <ClInclude Include="Triangulo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
