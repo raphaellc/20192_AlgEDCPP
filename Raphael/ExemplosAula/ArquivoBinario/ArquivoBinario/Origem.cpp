@@ -12,13 +12,14 @@ int * carregaInteiros() {
 	while (!if_arquivo.eof() && j < 10) {
 		//cout << if_arquivo.eof() << " ";
 		if_arquivo.read(reinterpret_cast<char *>(&vetorInt[j]), sizeof(int));
-		cout << vetorInt[j] << " ";
+		//cout << vetorInt[j] << " ";
 		j++;
 		//cout << if_arquivo.eof() << " ";
 	}
 	return vetorInt;
 }
 void main() {
+	int * vetI;
 	ofstream arquivo;//("Dados.bin", ios::binary | ios::out);
 	arquivo.open("Dados.bin", ios::binary);
 	if (!arquivo.is_open()) {
@@ -32,6 +33,10 @@ void main() {
 		//cout << i << endl;
 	}
 	arquivo.close();
-	carregaInteiros();
+	vetI = carregaInteiros();
+	for (int i = 0; i < 10; i++) {
+		cout << vetI[i] << endl;
+	}
+
 	system("pause");
 }
