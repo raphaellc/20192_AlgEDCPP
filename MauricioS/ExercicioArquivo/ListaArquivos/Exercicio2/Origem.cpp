@@ -8,6 +8,7 @@ void main()
 {
 	Item *item1 = new Item(1, 2);
 	Item *item2 = new Item(3, 4);
+	Item *itemTeste = new Item[2];
 
 	ofstream arquivo("arquivoTeste.dat", ios::binary | ios::out);
 
