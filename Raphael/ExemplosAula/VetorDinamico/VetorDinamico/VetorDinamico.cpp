@@ -1,6 +1,4 @@
 #include "VetorDinamico.h"
-#include <iostream>
-
 
 VetorDinamico::VetorDinamico()
 {
@@ -42,7 +40,7 @@ void VetorDinamico::adicionaValor(int valor)
 
 int VetorDinamico::removeValor(int posicao)
 {
-	int valor_retorno = 0, j = 0;
+	int valor_retorno = 0;
 	if (cont == 0) {
 		return -1;
 	}	
@@ -56,7 +54,7 @@ int VetorDinamico::removeValor(int posicao)
 		if (cont == (tam - 5) && tam > 5) {//verificar para realocar
 			for (int i = 0; i < tam; i++) {
 				if (this->vetor_dinamico[i] <= -1) {
-					j = i + 1;
+					int j = i + 1;
 					while ((this->vetor_dinamico[j] <= -1) && j < tam) {
 						j++;
 					}
