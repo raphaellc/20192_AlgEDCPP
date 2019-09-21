@@ -42,7 +42,7 @@ void VetorDinamico::adicionaValor(int valor)
 
 int VetorDinamico::removeValor(int posicao)
 {
-	int valor_retorno, j = 0;
+	int valor_retorno = 0, j = 0;
 	if (cont == 0) {
 		return -1;
 	}	
@@ -70,7 +70,7 @@ int VetorDinamico::removeValor(int posicao)
 		}
 	}
 
-	return 0;
+	return valor_retorno;
 }
 
 int VetorDinamico::obtemValor(int posicao)
