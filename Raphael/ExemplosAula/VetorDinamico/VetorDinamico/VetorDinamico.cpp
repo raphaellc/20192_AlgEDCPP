@@ -1,5 +1,5 @@
 #include "VetorDinamico.h"
-
+#include <cstdlib>
 VetorDinamico::VetorDinamico()
 {
 	this->vetor_dinamico = (int *) malloc(5 * sizeof(int));
