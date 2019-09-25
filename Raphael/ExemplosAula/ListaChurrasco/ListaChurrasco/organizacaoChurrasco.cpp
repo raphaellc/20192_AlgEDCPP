@@ -9,7 +9,8 @@ int main() {
 	pessoa1->defineNome("Ian");
 	pessoa2->defineNome("Maria");
 	pessoa3->defineNome("Dillan");
-
+	listaChurrasco->listaPessoasDoChurrasco();
+	std::cout << std::endl;
 	listaChurrasco->adicionarPessoa(pessoa1);
 	listaChurrasco->adicionarPessoa(pessoa2);
 	listaChurrasco->adicionarPessoa(pessoa3);
