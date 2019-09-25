@@ -6,6 +6,7 @@ public:
 	ListaPessoasChurrasco();
 	~ListaPessoasChurrasco();
 	void adicionarPessoa(Pessoa * p);
+	void listaPessoasDoChurrasco();
 	//removerPessoa
 	//buscarPessoaPorNome
 	//buscarPessoasPorGenero

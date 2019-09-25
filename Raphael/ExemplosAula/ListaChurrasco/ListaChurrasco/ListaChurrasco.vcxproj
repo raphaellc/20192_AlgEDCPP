@@ -111,6 +111,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ListaPessoasChurrasco.h" />
+    <ClInclude Include="Pessoa.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ListaPessoasChurrasco.cpp" />
+    <ClCompile Include="organizacaoChurrasco.cpp" />
+    <ClCompile Include="Pessoa.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

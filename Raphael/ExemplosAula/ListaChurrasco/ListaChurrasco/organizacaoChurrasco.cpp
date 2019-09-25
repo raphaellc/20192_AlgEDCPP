@@ -13,7 +13,7 @@ int main() {
 	listaChurrasco->adicionarPessoa(pessoa1);
 	listaChurrasco->adicionarPessoa(pessoa2);
 	listaChurrasco->adicionarPessoa(pessoa3);
-
+	listaChurrasco->listaPessoasDoChurrasco();
 	system("pause");
 	return 0;
 }
