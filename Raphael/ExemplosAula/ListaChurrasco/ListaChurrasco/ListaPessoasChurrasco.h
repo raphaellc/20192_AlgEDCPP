@@ -1,5 +1,6 @@
 #pragma once
 #include "Pessoa.h"
+#include "No.h"
 class ListaPessoasChurrasco
 {
 public:
@@ -13,6 +14,8 @@ public:
 	//contarPessoasPorGenero
 	//contarPessoasPorIdade
 private:
-	Pessoa * inicio_lista;
+	No * inicio_lista;
+	No * fim_lista;
+	int quantidadeNo;
 };
 

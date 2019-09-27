@@ -4,17 +4,11 @@
 
 Pessoa::Pessoa()
 {
-	this->proxima = nullptr;
 }
 
 
 Pessoa::~Pessoa()
 {
-}
-
-Pessoa * Pessoa::obtemProxima()
-{
-	return this->proxima;
 }
 
 void Pessoa::defineNome(std::string nm)
@@ -25,9 +19,4 @@ void Pessoa::defineNome(std::string nm)
 std::string Pessoa::obtemNome()
 {
 	return this->nome;
-}
-
-void Pessoa::defineProximaPessoa(Pessoa * pr)
-{
-	this->proxima = pr;
 }

@@ -13,16 +13,17 @@ ListaPessoasChurrasco::~ListaPessoasChurrasco()
 
 void ListaPessoasChurrasco::adicionarPessoa(Pessoa * p)
 {
+	No * novo_no = new No();
+	novo_no->defineInfo(p);
 	if (this->inicio_lista == nullptr) {
-		this->inicio_lista = p;
+		this->inicio_lista = novo_no;
+		this-> fim_lista = novo_no;
 	}
 	else {
-		Pessoa * percorre = this->inicio_lista;
-		while (percorre->obtemProxima() != nullptr) {
-			percorre = percorre->obtemProxima();
-		}
-		percorre->defineProximaPessoa(p);
+		fim_lista->defineProximo(novo_no);
+		fim_lista = novo_no;
 	}
+	quantidadeNos++
 }
 
 void ListaPessoasChurrasco::listaPessoasDoChurrasco()
@@ -31,10 +32,10 @@ void ListaPessoasChurrasco::listaPessoasDoChurrasco()
 		std::cout << "lista vazia";
 	}
 	else {
-		Pessoa * percorre = this->inicio_lista;
+		No * percorre = this->inicio_lista;
 		while (percorre != nullptr) {
-			std::cout << "Nome da Pessoa: " << percorre->obtemNome().c_str() << std::endl;
-			percorre = percorre->obtemProxima();
+			std::cout << "Nome da Pessoa: " << percorre->obtemInfo()->obtemNome().c_str() << std::endl;
+			percorre = percorre->obtemProximo();
 		}
 	}
 }

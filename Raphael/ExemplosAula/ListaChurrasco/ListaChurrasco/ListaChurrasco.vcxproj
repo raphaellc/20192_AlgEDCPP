@@ -112,10 +112,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ListaPessoasChurrasco.h" />
+    <ClInclude Include="No.h" />
     <ClInclude Include="Pessoa.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ListaPessoasChurrasco.cpp" />
+    <ClCompile Include="No.cpp" />
     <ClCompile Include="organizacaoChurrasco.cpp" />
     <ClCompile Include="Pessoa.cpp" />
   </ItemGroup>
