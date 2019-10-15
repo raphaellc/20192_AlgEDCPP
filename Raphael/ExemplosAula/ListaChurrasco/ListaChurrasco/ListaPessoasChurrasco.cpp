@@ -23,7 +23,7 @@ void ListaPessoasChurrasco::adicionarPessoa(Pessoa * p)
 		fim_lista->defineProximo(novo_no);
 		fim_lista = novo_no;
 	}
-	quantidadeNos++
+	quantidadeNo++;
 }
 
 void ListaPessoasChurrasco::listaPessoasDoChurrasco()
