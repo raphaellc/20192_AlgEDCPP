@@ -1,6 +1,6 @@
 #pragma once
 #include "libUnicornio.h"
-
+#include "Pilha.h"
 class Jogo
 {
 public:
@@ -11,5 +11,6 @@ public:
 	void finalizar();
 
 	void executar();
+
 };
 
