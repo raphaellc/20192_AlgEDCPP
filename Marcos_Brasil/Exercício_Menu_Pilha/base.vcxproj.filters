@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Jogo.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Tela_Menu.cpp">
+      <Filter>Telas</Filter>
+    </ClCompile>
+    <ClCompile Include="Tela_Jogo.cpp">
+      <Filter>Telas</Filter>
+    </ClCompile>
+    <ClCompile Include="Tela_Controle.cpp">
+      <Filter>Telas</Filter>
+    </ClCompile>
+    <ClCompile Include="Tela_Creditos.cpp">
+      <Filter>Telas</Filter>
+    </ClCompile>
+    <ClCompile Include="Tela_Pause.cpp">
+      <Filter>Telas</Filter>
+    </ClCompile>
+    <ClCompile Include="Gerenciador_Tela.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Jogo.h" />
+    <ClInclude Include="Tela.h">
+      <Filter>Telas</Filter>
+    </ClInclude>
+    <ClInclude Include="Tela_Menu.h">
+      <Filter>Telas</Filter>
+    </ClInclude>
+    <ClInclude Include="Tela_Jogo.h">
+      <Filter>Telas</Filter>
+    </ClInclude>
+    <ClInclude Include="Tela_Controle.h">
+      <Filter>Telas</Filter>
+    </ClInclude>
+    <ClInclude Include="Tela_Creditos.h">
+      <Filter>Telas</Filter>
+    </ClInclude>
+    <ClInclude Include="Tela_Pause.h">
+      <Filter>Telas</Filter>
+    </ClInclude>
+    <ClInclude Include="Gerenciador_Tela.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Telas">
+      <UniqueIdentifier>{76090a21-586c-4fb0-8ee3-b8b9e70049eb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
