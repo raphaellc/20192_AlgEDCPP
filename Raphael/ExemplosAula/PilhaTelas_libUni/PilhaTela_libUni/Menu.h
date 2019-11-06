@@ -7,16 +7,16 @@ class Menu : public Tela
 {
 public:
 	Menu();
+	Menu(std::string tto);
 	~Menu();
-
+	
 	void inicializar() override;
 	void finalizar() override;
 
 	void atualizar() override;
 	void desenhar() override;
-	std::string titulo;
 	void adicionaTela(Tela * tl);
-	Tela* obtemProximaTela();
+	Tela* obtemProximaTela() override;
 private:
 	Lista<Tela> * itensMenu = new Lista<Tela>();
 	Lista<BotaoSprite> * botoesMenu = new Lista<BotaoSprite>();

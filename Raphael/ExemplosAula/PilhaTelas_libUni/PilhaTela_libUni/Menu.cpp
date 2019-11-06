@@ -3,6 +3,12 @@
 
 Menu::Menu()
 {
+
+}
+
+Menu::Menu(std::string tto)
+{
+	this->defineTitulo(tto);
 }
 
 Menu::~Menu()
@@ -12,26 +18,24 @@ Menu::~Menu()
 void Menu::inicializar()
 {
 	int posicao = -100;
-	for (int i = 0; itensMenu->obtemTamanhoLista(); i++) {
-		gRecursos.carregarSpriteSheet(((Menu*) itensMenu->obterElementoEm(i))->titulo, "assets/botaosprite/vermelho.png", 3, 1);
+	for (int i = 0;i < itensMenu->obtemTamanhoLista(); i++) {
+		gRecursos.carregarSpriteSheet((itensMenu->obterElementoEm(i))->obtemTitulo(), "assets/botaosprite/vermelho.png", 3, 1);
 		
 		BotaoSprite* bs = new BotaoSprite();
-		bs->setSpriteSheet(((Menu*)itensMenu->obterElementoEm(i))->titulo);
+		bs->setSpriteSheet((itensMenu->obterElementoEm(i))->obtemTitulo());
 		bs->setPos(gJanela.getLargura() / 2, gJanela.getAltura() / 2 + posicao);
 		
 		posicao += 100;
 		
 		botoesMenu->insereFimLista(bs);
 	}
-	
-
 }
 
 void Menu::finalizar()
 {
 	//	Descarregar spritesheets
 	for (int i = 0; itensMenu->obtemTamanhoLista(); i++) {
-		gRecursos.descarregarSpriteSheet(((Menu*)itensMenu->obterElementoEm(i))->titulo);
+		gRecursos.descarregarSpriteSheet((itensMenu->obterElementoEm(i))->obtemTitulo());
 	}
 }
 

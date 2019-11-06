@@ -25,7 +25,7 @@ T * Pilha<T>::desempilhar() {
 
 template<class T>
 T * Pilha<T>::topo() {
-	return Lista<T>::obtemUltimoElemento();
+	return Lista<T>::obterUltimoElemento();
 }
 
 template<class T>

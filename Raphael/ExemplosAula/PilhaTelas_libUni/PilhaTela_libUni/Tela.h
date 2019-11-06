@@ -1,10 +1,20 @@
 #pragma once
+#include <string>
 class Tela
 {
-	virtual void inicializar() = 0;
-	virtual void finalizar() = 0;
-
-	virtual void atualizar() = 0;
-	virtual void desenhar() = 0;
+public:
+	Tela();
+	Tela(std::string tto);
+	virtual ~Tela();
+	virtual void inicializar();
+	virtual void finalizar();
+	virtual void atualizar();
+	virtual void desenhar();
+	virtual Tela * obtemProximaTela();
+	std::string obtemTitulo();
+	void defineTitulo(std::string tto);
+private:
+	std::string titulo;
+	
 };
 
