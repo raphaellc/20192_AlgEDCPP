@@ -181,25 +181,22 @@ Nodo * ArvoreBinaria::buscar(int _valor, Nodo * _raiz)
 
 void ArvoreBinaria::deletar(int _valor, Nodo * _raiz)
 {
-	//deletando só a raiz
+	if (_valor == _raiz->dado)
+	{
+		Nodo * aux = new Nodo;
+		*aux = *_raiz;
+		delete _raiz;
+		_raiz = nullptr;
+		raiz = aux->dir;
+		inserir(aux->esq, raiz);
+	}
 	if (_raiz != nullptr)
 	{
-		if (_valor == _raiz->dado)
-		{
-			Nodo * aux = new Nodo;
-			*aux = *_raiz;
-			delete _raiz;
-			raiz = aux->dir;
-			inserir(aux->esq, raiz);
-		}
-	}
-	else
-	{
-		if (_valor < _raiz->dado);
+		if (_valor < _raiz->dado)
 		{
 			buscar(_valor, _raiz->esq);
 		}
-		if (_valor >= _raiz->dado);
+		if (_valor >= _raiz->dado)
 		{
 			buscar(_valor, _raiz->dir);
 		}
@@ -221,7 +218,7 @@ void ArvoreBinaria::visitarPreOrdem(Nodo * _n)
 
 void ArvoreBinaria::visitarCentral(Nodo * _n)
 {
-	
+
 	if (_n->esq != nullptr)
 	{
 		visitarPreOrdem(_n->esq);

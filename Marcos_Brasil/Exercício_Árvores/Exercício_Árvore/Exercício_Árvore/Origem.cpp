@@ -25,7 +25,7 @@ int main() {
 	cout << endl;
 	arvore.deletar(10);
 	cout << endl;
-	arvore.deletar(22);
+	arvore.deletar(20);
 	cout << endl;
 	arvore.visitarPreOrdem();
 	cout << endl;
