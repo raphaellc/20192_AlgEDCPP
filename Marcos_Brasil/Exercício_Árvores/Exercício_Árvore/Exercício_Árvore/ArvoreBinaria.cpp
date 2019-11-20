@@ -161,38 +161,48 @@ void ArvoreBinaria::inserir(Nodo * _aux, Nodo * _raiz)
 
 Nodo * ArvoreBinaria::buscar(int _valor, Nodo * _raiz)
 {
-	if (_valor == _raiz->dado)
+	if (_valor < _raiz->dado)
 	{
-		return _raiz;
-	}
-	if (_valor < _raiz->dado);
-	{
+		if (_raiz->esq == nullptr)
+		{
+			return _raiz;
+		}
 		buscar(_valor, _raiz->esq);
 	}
-	if (_valor >= _raiz->dado);
+	if (_valor >= _raiz->dado)
 	{
+		if (_raiz->dir == nullptr)
+		{
+			return _raiz;
+		}
 		buscar(_valor, _raiz->dir);
 	}
 }
 
 void ArvoreBinaria::deletar(int _valor, Nodo * _raiz)
 {
-	if (_valor == _raiz->dado)
+	//deletando só a raiz
+	if (_raiz != nullptr)
 	{
-		Nodo * aux = new Nodo;
-		*aux = *_raiz;
-		delete _raiz;
-		raiz = aux->dir;
-		aux = aux->esq;
-		inserir(buscar(aux->dado), raiz);
+		if (_valor == _raiz->dado)
+		{
+			Nodo * aux = new Nodo;
+			*aux = *_raiz;
+			delete _raiz;
+			raiz = aux->dir;
+			inserir(aux->esq, raiz);
+		}
 	}
-	if (_valor < _raiz->dado);
+	else
 	{
-		buscar(_valor, _raiz->esq);
-	}
-	if (_valor >= _raiz->dado);
-	{
-		buscar(_valor, _raiz->dir);
+		if (_valor < _raiz->dado);
+		{
+			buscar(_valor, _raiz->esq);
+		}
+		if (_valor >= _raiz->dado);
+		{
+			buscar(_valor, _raiz->dir);
+		}
 	}
 }
 
