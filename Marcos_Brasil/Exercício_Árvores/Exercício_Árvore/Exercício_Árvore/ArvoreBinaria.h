@@ -1,7 +1,4 @@
-struct Nodo {
-	Nodo *esq, *dir;
-	int dado;
-};
+#include "Nodo.h"
 
 class ArvoreBinaria
 {

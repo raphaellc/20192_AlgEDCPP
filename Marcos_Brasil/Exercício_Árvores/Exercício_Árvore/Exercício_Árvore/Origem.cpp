@@ -1,9 +1,9 @@
 #include <iostream>
 #include "ArvoreBinaria.h"
 
-using namespace std;
-
 int main() {
+
+	setlocale(LC_ALL, "ptb");
 
 	ArvoreBinaria arvore;
 
@@ -25,7 +25,9 @@ int main() {
 	cout << endl;
 	arvore.deletar(10);
 	cout << endl;
-	arvore.deletar(20);
+	arvore.deletar(22);
+	cout << endl;
+//	arvore.deletar(30);
 	cout << endl;
 	arvore.visitarPreOrdem();
 	cout << endl;
