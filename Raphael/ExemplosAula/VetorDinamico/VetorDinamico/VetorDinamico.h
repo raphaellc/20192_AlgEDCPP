@@ -12,6 +12,6 @@ public:
 private:
 	void realocar(int novo_tam);
 	int * vetor_dinamico;
-	int tam = 0, cont;
+	int tam = 0, cont; //cont == qtd_elementos; tam==tamanho
 };
 

@@ -25,7 +25,7 @@ void VetorDinamico::adicionaValor(int valor)
 		cont++;
 	}
 	else if (cont == tam) {
-		realocar(tam + 5);
+		realocar(tam + 5); //inicialmente 5 vai incrementar de 5 em 5
 		this->vetor_dinamico[cont] = valor;
 		cont++;
 	}
@@ -97,7 +97,15 @@ int VetorDinamico::obterNumElementos()
 
 void VetorDinamico::realocar(int novo_tam)
 {
-	this->vetor_dinamico = (int *) realloc(this->vetor_dinamico, novo_tam*sizeof(int));
+	//this->vetor_dinamico = (int *) realloc(this->vetor_dinamico, novo_tam*sizeof(int));
+	
+	//copiando o endereco do início do vetor
+	int * vet_aux = this->vetor_dinamico; 
+	this->vetor_dinamico = new int[novo_tam];
+	//copiando os dados do espaço antigo para o novos espaço
+	for (int j = 0; j < tam; j++) 
+		this->vetor_dinamico[j] = vet_aux[j];
+	delete[] vet_aux;
 	for (int i = tam; i < novo_tam; i++) {
 		this->vetor_dinamico[i] = -1;
 	}
