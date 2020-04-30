@@ -29,7 +29,7 @@ void VetorDinamico::adicionaValor(int valor)
 		this->vetor_dinamico[cont] = valor;
 		cont++;
 	}
-	else if (cont != tam) {
+	else{
 		for (int i = 0; i < tam; i++) {
 			if ((this->vetor_dinamico[i] < 0) && atribuido) {
 				this->vetor_dinamico[i] = valor;

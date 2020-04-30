@@ -60,8 +60,8 @@ int main() {
 
 	std::cout << "Tamanho " << vd->obterTamanho() << std::endl;
 	std::cout << "Numero de Elementos " << vd->obterNumElementos() << std::endl;
-	std::cout << vd->obtemValor(0) << std::endl;
-	std::cout << vd->obtemValor(1) << std::endl;
+	//std::cout << vd->obtemValor(0) << std::endl;
+	//std::cout << vd->obtemValor(1) << std::endl;
 	std::cout << vd->obtemValor(2) << std::endl;
 	std::cout << vd->obtemValor(3) << std::endl;
 	std::cout << vd->obtemValor(4) << std::endl;
