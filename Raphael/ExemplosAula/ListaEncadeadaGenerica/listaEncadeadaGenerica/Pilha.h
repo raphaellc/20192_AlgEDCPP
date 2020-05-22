@@ -2,7 +2,7 @@
 #include "Lista.h"
 template<class T>
 class Pilha :
-	public Lista<T>
+	protected Lista<T>
 {
 public:
 	Pilha() {};
@@ -12,6 +12,7 @@ public:
 	T * topo();
 	void esvaziaPilha();
 	int obtemTamanhoPilha();
+	
 };
 template<class T>
 void Pilha<T>::empilhar(T * elemento) {

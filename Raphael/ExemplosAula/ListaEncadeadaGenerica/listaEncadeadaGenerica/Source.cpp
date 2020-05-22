@@ -6,7 +6,7 @@
 
 int main() {
 
-	//Pilha<Pessoa> * pilha_pessoas = new Pilha<Pessoa>;
+	Pilha<Pessoa> * pilha_pessoas = new Pilha<Pessoa>;
 	
 	
 	Lista<Pessoa> * listaPessoas = new Lista<Pessoa>;
@@ -31,7 +31,7 @@ int main() {
 	pessoa3->i_idade = 0;
 
 	
-	/*
+	
 	listaPessoas->insereFimLista(pessoa1);
 	std::cout << listaPessoas->obtemTamanhoLista() << std::endl;
 
@@ -62,7 +62,7 @@ int main() {
 	//if (listaPessoas->contemNaLista(pessoa3)) std::cout << "sim \n"; else std::cout << "não \n";
 	listaPessoas->esvaziaLista();
 	std::cout << listaPessoas->obtemTamanhoLista() << std::endl;
-	*/
+	
 
 
 
